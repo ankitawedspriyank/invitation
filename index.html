@@ -139,14 +139,14 @@ p {line-height: 2}
     <div class="w3-container w3-white w3-center">
       <h1 class="w3-wide">CAN YOU COME?</h1>
       <p>We really hope you can make it.</p>
-      <form>
-        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name ="name" id="text">
+      <form onsubmit="JavaScript:passValue();sendEmail();">
+        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name ="name" id="text" required>
          
       
       <p><i>Sincerely, Ankita & Priyank</i></p>
       <div class="w3-row">
         <div class="w3-half">
-         <button  type="button"  class="w3-button w3-block w3-green" onclick="passValue();sendEmail();">Going</button>
+         <button  type="submit"  class="w3-button w3-block w3-green" >Going</button>
          
          
         </div>
