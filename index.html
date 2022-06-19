@@ -52,18 +52,27 @@ p {line-height: 2}
   background-repeat: no-repeat;
   
 }
-.bgimg2 {
-  min-height: 100%;
-  background-position: center;
-  background-size:cover;
-  background-repeat: no-repeat;
-  max-width: 100%;
-  height:auto;
+
   
-  
-}
+
 .bgimg {background-image: url("https://github.com/adityaSrivastava29/vivek-certificates/blob/master/wedding_couple.jpg?raw=true")}
-.bgimg2 {background-image: url("https://user-images.githubusercontent.com/71128324/174474619-fea76c89-db64-4e44-a98d-ba8ee63344f2.png")}
+
+	
+	.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 </style>
 </head>
 <body>
@@ -100,12 +109,20 @@ p {line-height: 2}
 
 <!-- Background photo -->
 
-<div class="w3-display-container bgimg2">
+<div class="container">
+  <img class="w3-image" src="https://user-images.githubusercontent.com/71128324/174474619-fea76c89-db64-4e44-a98d-ba8ee63344f2.png" alt="Snow" style="width:100%;">
+  
+  <div class="centered"></div>
   <div class="w3-display-middle w3-text-white w3-center">
     
     <h1 class="w3-jumbo">You Are Invited</h1><br>
     <h2>Of course..</h2>
   </div>
+</div>
+
+
+<!-- <div class="w3-display-container bgimg2 w3-image"> -->
+  
 </div>
 
 <!-- RSVP section -->
