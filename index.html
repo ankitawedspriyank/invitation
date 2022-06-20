@@ -4,6 +4,23 @@
 <title>Wedding Invitation </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script>
+  function SubForm (){
+      $.ajax({
+          url:'https://api.apispreadsheets.com/data/3ezxBYlty2OCkcKj/',
+          type:'post',
+          data:$("#myForm").serializeArray(),
+          
+      });
+      window.open(
+            "going.html")
+  }
+  </script>
 <script src=
 	"https://smtpjs.com/v3/smtp.js">
 </script>
@@ -14,6 +31,8 @@
              
         }
     </script>
+   
+  
 <script type="text/javascript">
 	function sendEmail() {
 	Email.send({
@@ -38,6 +57,13 @@ $(document).ready(function(){
   });
 });
 </script>
+<script>
+  function validateTextBox() {
+    if (document.getElementById("textbox").value != "") {} else {
+        alert("Please enter a value");
+    }
+}
+</script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -45,6 +71,7 @@ $(document).ready(function(){
 body,h1,h2{font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 p {line-height: 2}
+
 .bgimg {
   min-height: 100%;
   background-position: center;
@@ -139,7 +166,7 @@ p {line-height: 2}
     <div class="w3-container w3-white w3-center">
       <h1 class="w3-wide">CAN YOU COME?</h1>
       <p>We really hope you can make it.</p>
-      <form onsubmit="JavaScript:passValue();sendEmail();">
+      <form id="myForm" onsubmit=" passValue();SubForm();  return false">
         <input class="w3-input w3-border" type="text" placeholder="Name(s)" name ="name" id="text" required>
          
       
@@ -197,7 +224,7 @@ p {line-height: 2}
 <footer class="w3-center w3-black w3-padding-16">
   <p>Developed by <a href="https://vivekcyber2525.github.io/" title="W3.CSS" target="_blank" class="w3-hover-text-green">Vivek Mishra</a></p>
 </footer>
-<div class="w3-hide-small" style="margin-bottom:32px">&nbsp;</div>
+<div class="w3-hide-small" style="margin-bottom:32px"></div>
 
 
 
